@@ -36,7 +36,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GroceriesServiceProvider = /** @class */ (function () {
     function GroceriesServiceProvider(http) {
         this.http = http;
-        this.baseURL = "http://localhost:8080";
+        // baseURL = "http://localhost:8080";
+        this.baseURL = "https://groceries-server-q.herokuapp.com/";
         this.items = [];
         console.log('Hello GroceriesServiceProvider Provider');
         this.dataModifySubject = new __WEBPACK_IMPORTED_MODULE_2_rxjs__["Subject"]();
@@ -86,9 +87,10 @@ var GroceriesServiceProvider = /** @class */ (function () {
     };
     GroceriesServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], GroceriesServiceProvider);
     return GroceriesServiceProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=groceries-service.js.map
