@@ -13,7 +13,7 @@ import { Observable } from 'rxjs/Observable';
 */
 @Injectable()
 export class GroceriesServiceProvider {
-  baseURL = "https://groceries-ionic.herokuapp.com/";
+  baseURL = "http://localhost:8080";
 
   items = [];
   dataModified: Observable<boolean>;
@@ -31,6 +31,7 @@ export class GroceriesServiceProvider {
   }
 
   getItems(): Observable<object[]> {
+    console.log('Hello getItems');
     return this.http.get(this.baseURL + "/api/groceries").pipe(
       map(this.extractData),
       catchError(this.handleError)

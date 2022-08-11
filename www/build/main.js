@@ -47,6 +47,7 @@ var GroceriesServiceProvider = /** @class */ (function () {
         return body || {};
     };
     GroceriesServiceProvider.prototype.getItems = function () {
+        console.log('Hello getItems');
         return this.http.get(this.baseURL + "/api/groceries").pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["map"])(this.extractData), Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["catchError"])(this.handleError));
     };
     GroceriesServiceProvider.prototype.removeItem = function (index) {
